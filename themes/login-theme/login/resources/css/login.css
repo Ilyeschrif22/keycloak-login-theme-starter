@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --color-primary: #000;
+    --color-text: #878787;
+    --color-text-light: #fff;
+    --font-title: 18px;
+    --font-text: 12px;
+    --font-input: 14px;
+    --font-terms: 12px;
+    --button-width: 448px;
+    --button-height: 40px;
+    --input-height: 40px;
+    --icon-size: 20px;
+    --margin-bottom: 28px;
+    --padding-horizontal: 8px;
+
+    --font-main: "Roboto", sans-serif;
+    --font-mono: "Space Mono", monospace;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: var(--font-main);
+}
+
+.main-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.image-container {
+    height: 100%;
+    width: 50%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/theme-image.jpg");
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.placeholder-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.form-container {
+    flex: 1;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.text {
+    font-size: var(--font-text);
+    margin-bottom: var(--margin-bottom);
+    font-family: var(--font-mono);
+    color: var(--color-text);
+}
+
+.gmail-button {
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 var(--margin-bottom);
+    cursor: pointer;
+    gap: 10px;
+    text-decoration: none;
+    border: none;
+    font-size: var(--font-input);
+    transition: background-color 0.3s ease;
+}
+
+.gmail-button:hover {
+    background-color: #222;
+}
+
+.or-text {
+    font-size: var(--font-text);
+    font-family: var(--font-mono);
+    margin-bottom: var(--margin-bottom);
+    color: var(--color-text);
+}
+
+#kc-form-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email-input {
+    margin: 20px 0 20px 0;
+    width: var(--button-width);
+    height: var(--input-height);
+    border: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--padding-horizontal);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.email-input:focus-within {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.email-input input {
+    font-size: var(--font-input);
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: var(--font-mono);
+    background: transparent;
+}
+
+.email-input.error {
+    border-color: #ef4444;
+}
+
+.input-error-text {
+    width: var(--button-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #ef4444;
+    font-family: var(--font-mono);
+}
+
+.form-options {
+    width: var(--button-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--margin-bottom);
+    margin-bottom: var(--margin-bottom);
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--font-input);
+    font-family: var(--font-mono);
+    color: var(--color-text);
+}
+
+.checkbox-container input[type="checkbox"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.forgot-password {
+    font-size: var(--font-input);
+    color: var(--color-primary);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    cursor: pointer;
+    transition: text-decoration 0.3s ease;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.continue-button {
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: var(--font-input);
+    transition: background-color 0.3s ease;
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+
+.continue-button:hover {
+    background-color: #222;
+}
+
+.continue-button:active {
+    transform: scale(0.98);
+}
+
+.continue-text {
+    font-size: var(--font-input);
+    color: var(--color-text-light);
+    font-weight: 400;
+}
+
+.signin-redirect {
+    margin-top: 14px;
+    font-size: var(--font-terms);
+    color: var(--color-text);
+    font-family: var(--font-mono);
+    text-align: center;
+    margin-bottom: var(--margin-bottom);
+}
+
+.signin-link {
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--color-primary);
+    transition: opacity 0.3s ease;
+}
+
+.signin-link:hover {
+    opacity: 0.7;
+}
+
+.terms-of-services {
+    font-size: var(--font-terms);
+    color: var(--color-text);
+    font-family: var(--font-mono);
+    padding: 0 15px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.underline {
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--color-text);
+    transition: opacity 0.3s ease;
+}
+
+.underline:hover {
+    opacity: 0.7;
+}
+
+#kc-social-providers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .image-container {
+        display: none;
+    }
+
+    .form-container {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 80px;
+        padding: 20px;
+    }
+
+    :root {
+        --button-width: 100%;
+    }
+
+    .gmail-button,
+    .continue-button,
+    .email-input,
+    .form-options {
+        width: 100%;
+    }
+}
+
+.loader {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

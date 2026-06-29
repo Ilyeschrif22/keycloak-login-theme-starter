@@ -1,0 +1,23 @@
+#kc-form-register {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#kc-form-register .email-input {
+    margin-top: 16px;
+}
+
+#kc-form-register .email-input:first-child {
+    margin-top: var(--margin-bottom);
+}
+
+#kc-form-register .input-error-text {
+    margin-top: -6px;
+    margin-bottom: 6px;
+}
+
+.email-input.mismatch {
+    border-color: #ef4444;
+}
