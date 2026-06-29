@@ -56,3 +56,20 @@ Realm used in this project:
 ```
 microservices-realm
 ```
+
+## Running with Docker
+
+Build the image:
+
+```bash
+docker build -t keycloak .
+```
+
+Run the container:
+
+```bash
+docker run -p 8180:8180 \
+  -e KEYCLOAK_ADMIN=admin \
+  -e KEYCLOAK_ADMIN_PASSWORD=admin \
+  keycloak
+```
