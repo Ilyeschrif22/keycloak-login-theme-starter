@@ -1,26 +1,58 @@
-Keycloak
-========
+# Keycloak custom theme
 
-To get help configuring Keycloak via the CLI, run:
+A custom Keycloak login theme with custom login and registration pages, built on top of the base Keycloak theme.
 
-on Linux/Unix:
+## Features
 
-    $ bin/kc.sh
+- Custom login page (`login.ftl`)
+- Custom registration page (`register.ftl`) with username, email, password, and password confirmation fields
+- Separate stylesheets for login and registration (`login.css`, `register.css`)
+- Social login button support (inherited from Keycloak's social providers)
 
-on Windows:
+## Project structure
 
-    $ bin\kc.bat
+```
+themes/
+└── ton-theme/
+    └── login/
+        ├── theme.properties
+        ├── template.ftl
+        ├── login.ftl
+        ├── register.ftl
+        ├── error.ftl
+        └── resources/
+            └── css/
+                ├── login.css
+                └── register.css
+```
 
-To try Keycloak out in development mode, run: 
+## Requirements
 
-on Linux/Unix:
+- Keycloak 24.0.3
+- Java 17+
 
-    $ bin/kc.sh start-dev
+## Running Keycloak locally
 
-on Windows:
+Start Keycloak in development mode:
 
-    $ bin\kc.bat start-dev
+```bash
+bin/kc.sh start-dev --http-port=8180
+```
 
-After the server boots, open http://localhost:8080 in your web browser. The welcome page will indicate that the server is running.
+Keycloak will be available at:
 
-To get started, check out the [configuration guides](https://www.keycloak.org/guides#server).
+```
+http://localhost:8180
+```
+
+Admin console:
+
+```
+http://localhost:8180/admin
+```
+
+Realm used in this project:
+
+```
+microservices-realm
+```
