@@ -2,6 +2,9 @@
 
 A custom Keycloak login theme with custom login and registration pages, built on top of the base Keycloak theme.
 
+<img width="1826" height="901" alt="image" src="https://github.com/user-attachments/assets/7f04177b-fcd4-4af6-9dad-5c617289f8bf" />
+
+
 ## Features
 
 - Custom login page (`login.ftl`)
