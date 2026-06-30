@@ -62,14 +62,17 @@ microservices-realm
 Build the image:
 
 ```bash
-docker build -t keycloak .
+docker build -t keycloak-auth .
 ```
 
 Run the container:
 
 ```bash
-docker run -p 8180:8180 \
+docker run -d \
+  --name keycloak \
+  -p 8180:8180 \
   -e KEYCLOAK_ADMIN=admin \
   -e KEYCLOAK_ADMIN_PASSWORD=admin \
-  keycloak
+  -v ~/Desktop/keycloak-login-theme-starter/data:/opt/keycloak/data \
+  keycloak-auth
 ```
